@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 Testar uppdatering
@@ -13,4 +14,10 @@ Testar uppdatering
 =======
 
 Testar uppdatering
+>>>>>>> origin/master
+=======
+
+Testar uppdatering
+
+Test III 
 >>>>>>> origin/master
