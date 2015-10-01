@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Laravel</title>
- <meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" href="css/main.css" rel="stylesheet" type="text/css">
 
        
@@ -42,13 +42,32 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="content">
-                <div class="jumbotron">
-                <img class="bakgrundsbild" src="img/login.png">
-                </div>
+       
+    <div class="content">
+        <div class="row">
+        <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+          <div class="col-sm-12">
+            <img class="logotype" alt="logotype" src="img/Logotype.png">
+            <p>hdjsjfhfj</p>
+            
+            <div class="row">
+              <div class="col-xs-8 col-sm-6">
+               
+              </div>
+              <div class="col-xs-4 col-sm-6">
+               
+              </div>
             </div>
+          </div>
         </div>
-        </div>
+
+
+
+            
+               
+            
+     
+           
+    </div>
     </body>
 </html>

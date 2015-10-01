@@ -1,12 +1,19 @@
 .bakgrundsbild {
-max-width: 1290px;
+max-width: 100%;
 position: relative;
+
 }
 
-.container {
+.col-sm-12 {
 background-color: #663399;
-max-width: 30%;
-position: absolute;
-top: 200px;
+   position: absolute;
+   position: fixed;
+    top: 30%;
+    right: 25%;
+    width: 40%;
+    height: 50%;
+    opacity: 0.8;
+
+
 
 }
