@@ -2,8 +2,18 @@
 <html>
     <head>
         <title>Laravel</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" href="css/main.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      
+
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
        
       <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -28,12 +38,15 @@
                 text-align: center;
                 display: table-cell;
                 vertical-align: middle;
+
                 
             }
 
             .content {
                 text-align: center;
                 display: inline-block;
+         
+
             }
 
             .title {
@@ -44,23 +57,39 @@
     <body>
        
     <div class="content">
+    
         <div class="row">
-        <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+            <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+
           <div class="col-sm-12">
-            <img class="logotype" alt="logotype" src="img/Logotype.png">
-            <p>hdjsjfhfj</p>
-            
-            <div class="row">
-              <div class="col-xs-8 col-sm-6">
-               
-              </div>
-              <div class="col-xs-4 col-sm-6">
-               
-              </div>
+            <img class="logotype" alt="logotype" width="150" src="img/Logotyp1.png">
+          
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">E-post</span>
+                <input type="text" class="form-control" placeholder="exempel@student.hh.se" aria-describedby="sizing-addon1">
             </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="sizing-addon2">Lösenord</span>
+                 <input type="text" class="form-control" placeholder="*****" aria-describedby="sizing-addon2">
+            </div>
+
+            <a href="">Registrera?</a>
+
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Logga in</button>
+            </div>
+            
+       
           </div>
         </div>
-           
     </div>
+
+
+            
+               
+            
+     
+  
     </body>
 </html>
