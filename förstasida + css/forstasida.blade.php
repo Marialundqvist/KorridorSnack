@@ -17,18 +17,38 @@
       <div class="innehall">
          <div class="row">
             <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+            <div class="loggaut">
+            <a href="#">Logga ut</a>
+            </div>
             <img class="logotype" alt="logotype" width="150" src="img/Logotype1.png">
             <div class="col-sm-12">
                 <div class="profil">
                <div class="col-sm-3">
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
-                     <p>hejhej</p>
+                     <div class="profiltext">
+                     <h3>Peter Karlsson</h3>
+                   </div>
+                     <a href="#">Mina inlägg<a/>
+                     </a>
                  </div>
                   </div>
                </div>
                <div class="col-sm-9">
-                  <p>hej</p>
+                  <h3>Senaste</h3>
+                  <ul class="nav navbar-nav">
+                    <li>
+                      <a href="#">Senaste</a>
+                    </li>
+
+                    <li>
+                       <a href="#">Populärast</a>
+                    </li>
+                  </ul>
+                  <!--
+                  <div class="senaste">
+                    <a href="#">Senaste</a><p>/</p><a href="#">Populärast</a>
+                  </div>-->
                </div>
                <div class="forum">
                <div class="col-sm-3">
