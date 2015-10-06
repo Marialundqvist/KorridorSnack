@@ -18,7 +18,7 @@
          <div class="row">
             <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
             <div class="loggaut">
-            <a href="#">Logga ut</a>
+            <a href="{{url('loggaut')}}">Logga ut</a>
             </div>
             <img class="logotype" alt="logotype" width="150" src="img/Logotype1.png">
             <div class="col-sm-12">
@@ -29,7 +29,7 @@
                      <div class="profiltext">
                      <h3>Peter Karlsson</h3>
                    </div>
-                     <a href="#">Mina inlägg<a/>
+                     <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>
                  </div>
                   </div>
@@ -38,11 +38,11 @@
                   <h3>Senaste</h3>
                   <ul class="nav navbar-nav">
                     <li>
-                      <a href="#">Senaste</a>
+                      <a href="{{url('senaste')}}">Senaste</a>
                     </li>
 
                     <li>
-                       <a href="#">Populärast</a>
+                       <a href="{{url('popularaste')}}">Populärast</a>
                     </li>
                   </ul>
                   <!--
@@ -54,19 +54,19 @@
                <div class="col-sm-3">
                 <h3>Forum</h3>
                     <div class="forsta"> 
-                    <a href="#">Senaste<a/>
+                    <a href="{{url('senaste')}}">Senaste<a/>
                     </div>
                     <div class="andra"> 
-                    <a href="#">Läxhjälp<a/>
+                    <a href="{{url('laxhjalp')}}">Läxhjälp<a/>
                     </div>
                     <div class="forsta"> 
-                    <a href="#">Hitta rätt<a/>
+                    <a href="{{url('hittaratt')}}">Hitta rätt<a/>
                     </div>
                     <div class="andra"> 
-                    <a href="#">Event<a/><br>
+                    <a href="{{url('event')}}">Event<a/><br>
                     </div>
                     <div class="forsta"> 
-                    <a href="#">Övrigt<a/>
+                    <a href="{{url('ovrigt')}}">Övrigt<a/>
                     </div>
                     </a>
                     
