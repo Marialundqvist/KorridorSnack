@@ -10,24 +10,53 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/*Vilken startsida du ska komma till när du skriver in public*/
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+
+
 Route::get('/', function () {
     return view('auth/register');
 });
 
+/*från registrera sidan till logga in sidan.*/
+Route::get('auth/register', function () {
+    return view('../auth/login');
+});
+
+
+
+
+
+
+/*från registrera sidan till logga in sidan.*/
+Route::get('../auth/login', function () {
+    return view('auth/register');
+});
+
+/*Logga in, hamna på förstasidan*/
+Route::get('auth/register', function () {
+    return view('forstasida');
+});
+
+
+
 /*Logga in, logga ut*/
 Route::get('welcome', function () {
-    return view('auth/login');
+    return view('login');
 });
 
 Route::get('loggaut', function () {
     return view('loggaut');
 });
 
-/*När du fyllt i dina uppgifter på register, ska du komma till forstasida*/
-Route::get('register', function () {
-    return view('forstasida');
-});
 
 
 /* Forumsvalmöjligheterna nedan */
@@ -61,7 +90,10 @@ Route::get('minainlagg', function () {
 });
 
 
+
+
 Route::get('home', function () {
     return view('home');
 });
+
 

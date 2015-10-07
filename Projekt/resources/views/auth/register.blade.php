@@ -35,7 +35,7 @@
             <img class="logotype" alt="logotype" src="img/Logotype1.png">
           <!-- text boxarna-->
 
-        <form method="POST" action="../auth/welcome">
+        <form method="POST" action="auth/register">
             {!! csrf_field() !!}
 
             <div class="input-group input-group-lg">
@@ -59,10 +59,10 @@
                  <input type="password" name="password_confirmation" class="form-control" placeholder="******" aria-describedby="sizing-addon2">
             </div>
 
-            <a href="">Logga in?</a>
+            <a href="{{url('auth/login')}}">Logga in?</a>
 <!-- knappen logga in -->
             <div class="btn-group" role="group" aria-label="...">
-                <button type="sumbit" class="btn btn-default">Registrera</button>
+                <button type="submit" class="btn btn-default">Registrera</button>
             </div>
         </form>  
        
