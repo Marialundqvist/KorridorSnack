@@ -2,18 +2,13 @@
 <html>
 <head>
 
-@include('includes.forstasida.blade.php')
+@include('includes.template')
 
 </head>
 
 <body>
-
-<div id="main" class="row">
-
-	@yield('innehall')
-
-</div>
-
+	<div class="container">
+		@yield('innehall')
 <p>senaste</p>
 
 </body>
