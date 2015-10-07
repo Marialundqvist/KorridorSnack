@@ -48,6 +48,12 @@
                  <input type="email" name="email" class="form-control" placeholder="exempel@student.hh.se" aria-describedby="sizing-addon2">
             </div>
 
+                    <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon2">Program</span>
+                 <input type="text" name="program" class="form-control" placeholder="Webbdesign" aria-describedby="sizing-addon2">
+            </div>
+
+
 
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon2">Lösenord</span>
