@@ -33,6 +33,8 @@
 
           <div class="col-sm-12"><!-- ligger i rowen. detta är är den lila rutan-->
             <img class="logotype" alt="logotype" src="img/Logotype1.png">
+
+            <p>Kom i kontakt med andra<br> studenter på Din skola!</p>
           <!-- text boxarna-->
 
         <form method="POST" action="auth/register">

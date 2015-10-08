@@ -9,7 +9,7 @@ body {
     width: 100%;
     display: table;
     font-weight: 100;
-    font-family: 'Lato';
+    font-family: arial;
 }
 
 
@@ -62,14 +62,25 @@ body {
 	margin-top: 2%;
 
 }
+p {
+
+    margin-top: 4%;
+    margin-right: 2%;
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 24px;
 
 
+
+}
 
 a{
 	float: left;
 	margin-top: 6%;
 	font-size: 18px;
 	color: white;
+
 
 }
 
@@ -79,6 +90,7 @@ a:hover{
 
 .logotype{
 	width: 150px;
+    margin-left: 30%;
 }
 
 
