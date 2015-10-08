@@ -28,6 +28,7 @@
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
                      <h3>Peter Karlsson</h3>
+                     <p>Webbdesign</p>
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>
@@ -45,10 +46,50 @@
                        <a href="{{url('popularaste')}}">Populärast</a>
                     </li>
                   </ul>
-                  <!--
+
+
+    <div id="inlagg">
+      <div class="dropdown">
+
+      <label for="sel1">Forum</label>
+      <select class="form-control" id="sel1">
+        <option>Senaste</option>
+        <option>Läxhjälp</option>
+        <option>Hitta rätt</option>
+        <option>Event</option>
+        <option>Övrigt</option>
+      </select>
+
+  </div>
+          <input type="text" class="form-control" placeholder="Inlägg">
+      </div>
+
+
+       <div id="knapp">
+        <button type="submit" class="btn btn-default">Skicka</button>        
+      </div>
+    
+<div class="container-fluid">
+  
+      <div id="inlagg2">
+          <input type="text" class="form-control" placeholder="Inlägg">
+      </div>
+
+      <div id="knapp2">
+        <button type="submit" class="btn btn-default">Skicka</button>        
+      </div>
+
+</div><!-- /.container-fluid -->
+
+
+
+
+                                    <!--
                   <div class="senaste">
                     <a href="#">Senaste</a><p>/</p><a href="#">Populärast</a>
                   </div>-->
+
+
                </div>
                <div class="forum">
                <div class="col-sm-3">

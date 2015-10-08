@@ -6,6 +6,52 @@ html, body
 /* --- media queries för skärm som är max 768--- */ 
    @media screen and (min-width: 200px){
 
+.dropdown {
+    width: 15%;
+    position: relative;
+
+}
+
+
+
+
+
+.inlagg{
+    width: 30%;
+    position: relative;
+    margin-top: 10%;
+    z-index: 1;
+}
+
+.inlagg2{
+    width: 30%;
+    position: relative;
+    margin-top: 10%;
+    z-index: 1;
+}
+
+.knapp {
+    float: right;
+    z-index: -1;
+}
+
+.knapp2 {
+    float: left;
+    z-index: -1;
+}
+
+
+
+
+
+.container-fluid {
+    background-color: #663399;
+    position: absolute;
+    margin-top: 2%;
+    height: 25%;
+    width: 95%;
+}
+
 .bakgrundsbild {
     width: 100%;
     position: relative;
