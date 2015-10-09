@@ -27,7 +27,17 @@
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
-                     <h3>Peter Karlsson</h3>
+
+                  <!--- Gör så att det syns vem som är inloggad -->
+                  @if(Auth::check())
+                  {{ Auth::User()->fname }}
+                  @endif
+
+                  <!--- Gör så att det syns vilket program den inloggade läser -->
+                   @if(Auth::check())
+                  {{ Auth::User()->program }}
+                  @endif
+
                      <p>Webbdesign</p>
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
