@@ -20,7 +20,7 @@
             <div class="loggaut">
             <a href="{{url('loggaut')}}">Logga ut</a>
             </div>
-            <img class="logotype" alt="logotype" width="150" src="img/Logotype1.png">
+            <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
             <div class="col-sm-12">
                 <div class="profil">
                <div class="col-sm-3">
