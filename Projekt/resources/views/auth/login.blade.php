@@ -21,9 +21,7 @@
 
             <meta charset="utf-8">
 
-        <style>
-           
-        </style>
+       
     </head>
     <body>
        
@@ -41,21 +39,25 @@
 
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1">E-mail</span>
-                <input type="email" name="email" class="form-control" placeholder="exempel@student.hh.se" aria-describedby="sizing-addon1">
+                <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="exempel@student.hh.se" aria-describedby="sizing-addon1">
             </div>
 
             <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon2">Lösenord</span>
-                 <input type="password" name="password" class="form-control" placeholder="******" aria-describedby="sizing-addon2">
+                 <input type="password" name="password" id="password" class="form-control" placeholder="******" aria-describedby="sizing-addon2">
             </div>
 
-            <a href="{{url('auth/register')}}">Registrera?</a>
-<!-- knappen logga in -->
+            <div>
+                <input type="checkbox" name="remember"> Komihåg mig
+              </div>  
+             <!-- knappen logga in -->
+
             <div class="btn-group" role="group" aria-label="...">
                 <button type="submit" class="btn btn-default">Logga in</button>
             </div>
         </form>  
-       
+      
+            <a href="{{url('auth/register')}}">Registrera?</a>
           </div>
         </div>
     </div>

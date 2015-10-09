@@ -23,28 +23,28 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 Route::get('/', function () {
-    return view('auth/register');
+    return view('forstasida');
 });
 
 /*från registrera sidan till logga in sidan.*/
-Route::get('auth/register', function () {
+Route::get('../auth/register', function () {
     return view('../auth/login');
 });
 
 
+/*Logga in, hamna på förstasidan*/
+Route::get('../auth/register', function () {
+    return view('forstasida');
+});
 
 
 
 
 /*från registrera sidan till logga in sidan.*/
 Route::get('../auth/login', function () {
-    return view('auth/register');
+    return view('../auth/register');
 });
 
-/*Logga in, hamna på förstasidan*/
-Route::get('auth/register', function () {
-    return view('forstasida');
-});
 
 
 
@@ -90,10 +90,5 @@ Route::get('minainlagg', function () {
 });
 
 
-
-
-Route::get('home', function () {
-    return view('home');
-});
 
 
