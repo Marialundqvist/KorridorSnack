@@ -60,23 +60,25 @@
         <option>Övrigt</option>
       </select>
 </div>
-
+        <div id="inlaggsruta">
         <textarea class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
-  
+        </div>
 
-        <button type="submit" class="btn btn-default">Skicka</button>        
+        <div id="forstaknapp">
+        <button type="submit" class="btn btn-default">Skicka</button>
+        </div>        
 
     
 <div class="container-fluid" id="morklilaruta">
   <p>här ska inlägg kallas in</p>
    
-</div><!-- /.container-fluid -->
+</div><!-- mörklila ruta stängs -->
 
 <div class="container-fluid" id="ljuslilaruta">
    <input type="text" class="form-control" placeholder="Svara">
    <button type="submit" class="btn btn-default">Skicka</button> 
    
-</div><!-- /.container-fluid -->
+</div><!-- ljuslila ruta stängs -->
 
                </div>
                <div class="forum">
