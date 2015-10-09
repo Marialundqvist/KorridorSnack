@@ -12,9 +12,7 @@
             <!-- Latest compiled and minified JavaScript bootstrap-->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <!-- kopplar till css. för att vara responisv i olika strolekar ändras css, därför olika css filer-->
-           <link rel="stylesheet" type="text/css" href="../css/main768.css">
-            <link rel="stylesheet" type="text/css" href="../css/main1200.css"> 
-            <link rel="stylesheet" type="text/css" href="../css/mainmin1200.css">
+           <link rel="stylesheet" type="text/css" href="../css/login.css">
            
 
 
@@ -47,16 +45,16 @@
                  <input type="password" name="password" id="password" class="form-control" placeholder="******" aria-describedby="sizing-addon2">
             </div>
 
-            <div>
-                <input type="checkbox" name="remember"> Komihåg mig
-              </div>  
+            <div id="check">
+                <input type="checkbox" name="remember"> Kom ihåg mig
+            </div>  
              <!-- knappen logga in -->
 
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="submit" class="btn btn-default">Logga in</button>
-            </div>
+           
         </form>  
-      
+       <div class="btn-group" role="group" aria-label="...">
+                <button type="submit" class="btn btn-default">Logga in</button>
+         </div>
             <a href="{{url('auth/register')}}">Registrera?</a>
           </div>
         </div>

@@ -193,11 +193,6 @@ a:hover{
     border-radius: 4px;
 
 }
-/* --- knapp --- */ 
-.btn-group{
-    margin-top: 8%;
-    float: right;
-}
 
 /* --- text boxarna --- */ 
 .input-group{
@@ -225,7 +220,11 @@ a:hover{
 
 
 }
-
-
-
-
+#check {
+    float: right;
+    color: white;
+    }
+.btn-default{
+    font-family: arial;
+    color: #663399;
+    }
