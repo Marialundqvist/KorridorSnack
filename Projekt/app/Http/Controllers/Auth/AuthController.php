@@ -8,6 +8,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+
+
+
 class AuthController extends Controller
 {
     /*
@@ -21,7 +24,15 @@ class AuthController extends Controller
     |
     */
 
+
+
+    protected $loginPath = '../auth/register';
+    protected $redirectTo = 'forstasida';
+    protected $redirectAfterLogout = '../auth/login';
+
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+
+
 
     /**
      * Create a new authentication controller instance.
@@ -30,6 +41,8 @@ class AuthController extends Controller
      */
     public function __construct()
     {
+
+
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
@@ -44,6 +57,7 @@ class AuthController extends Controller
         return Validator::make($data, [
             'fname' => 'required|max:255',
             'email' => 'required|email|max:255|unique:User',
+          
             'password' => 'required|confirmed|min:6',
         ]);
     }
@@ -59,7 +73,12 @@ class AuthController extends Controller
         return User::create([
             'fname' => $data['fname'],
             'email' => $data['email'],
+           
             'password' => bcrypt($data['password']),
         ]);
     }
+
+
+
+
 }

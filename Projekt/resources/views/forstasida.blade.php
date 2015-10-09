@@ -17,9 +17,11 @@
       <div class="innehall">
          <div class="row">
             <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+
             <div class="loggaut">
-            <a href="{{url('loggaut')}}">Logga ut</a>
+            <a href="{{URL::route('../auth/login')}}" class="btn btn-default">Logga ut</a>
             </div>
+            
             <img class="logotype" alt="logotype" width="150" src="img/Logotype1.png">
             <div class="col-sm-12">
                 <div class="profil">
