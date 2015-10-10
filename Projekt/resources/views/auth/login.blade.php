@@ -13,6 +13,7 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <!-- kopplar till css. för att vara responisv i olika strolekar ändras css, därför olika css filer-->
            <link rel="stylesheet" type="text/css" href="../css/login.css">
+            
            
 
 
@@ -30,6 +31,9 @@
 
           <div class="col-sm-12"><!-- ligger i rowen. detta är är den lila rutan-->
             <img class="logotype" alt="logotype" src="../img/Logotype1.png">
+
+             <p>Kom i kontakt med andra<br> studenter på Din skola!</p>
+
           <!-- text boxarna-->
 
         <form method="POST" action="../auth/login">
@@ -45,16 +49,19 @@
                  <input type="password" name="password" id="password" class="form-control" placeholder="******" aria-describedby="sizing-addon2">
             </div>
 
-            <div id="check">
-                <input type="checkbox" name="remember"> Kom ihåg mig
-            </div>  
+           
              <!-- knappen logga in -->
 
-           
-        </form>  
-       <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
                 <button type="submit" class="btn btn-default">Logga in</button>
-         </div>
+            </div>
+
+
+             <div id="check" >
+                <input type="checkbox" name="remember"> Kom ihåg mig
+              </div>  
+        </form>  
+      
             <a href="{{url('auth/register')}}">Registrera?</a>
           </div>
         </div>

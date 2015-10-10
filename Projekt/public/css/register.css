@@ -93,6 +93,12 @@ a:hover{
     margin-left: 30%;
 }
 
+    /* --- logga in knappen är lila --- */ 
+.btn-default{
+    font-family: arial;
+    color: #663399;
+    }
+
 
 }
 

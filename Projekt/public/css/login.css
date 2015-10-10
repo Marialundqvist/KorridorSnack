@@ -9,7 +9,7 @@ body {
     width: 100%;
     display: table;
     font-weight: 100;
-    font-family: 'Lato';
+    font-family: arial;
 }
 
 /* --- media queries för skärm som är minst 1200 --- */ 
@@ -81,6 +81,31 @@ a:hover{
 
 .logotype{
 	width: 150px;
+    margin-left: 30%;
+}
+
+#check {
+    float: right;
+    color: white;
+  
+    }
+.btn-default{
+    font-family: arial;
+    color: #663399;
+    }
+
+
+    p {
+
+    margin-top: 4%;
+    margin-right: 2%;
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 24px;
+
+
+
 }
 
 }
@@ -151,7 +176,32 @@ a:hover{
 
 .logotype{
     width: 150px;
+    margin-left: 30%;
+
 }
+#check {
+    float: right;
+    color: white;
+  
+    }
+.btn-default{
+    font-family: arial;
+    color: #663399;
+    }
+
+        p {
+
+    margin-top: 4%;
+    margin-right: 2%;
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 24px;
+
+
+
+}
+
 }
 
 
@@ -193,10 +243,15 @@ a:hover{
     border-radius: 4px;
 
 }
+/* --- knapp --- */ 
+.btn-group{
+    margin-top: 8%;
+    float: right;
+}
 
 /* --- text boxarna --- */ 
 .input-group{
-    margin-top: 3%;
+    margin-top: 2%;
 
 }
 
@@ -216,15 +271,36 @@ a:hover{
 
 .logotype{
     width: 150px;
+    margin-left: 30%;
 }
-
-
-}
+/* --- styr komihåg mif boxen --- */ 
 #check {
     float: right;
     color: white;
+    
     }
+    /* --- logga in knappen är lila --- */ 
 .btn-default{
     font-family: arial;
     color: #663399;
     }
+
+    p {
+
+    margin-top: 4%;
+    margin-right: 2%;
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 24px;
+
+
+
+}
+
+
+}
+
+
+
+
