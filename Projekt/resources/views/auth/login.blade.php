@@ -32,11 +32,11 @@
           <div class="col-sm-12"><!-- ligger i rowen. detta är är den lila rutan-->
             <img class="logotype" alt="logotype" src="../img/Logotype1.png">
 
-             <p>Kom i kontakt med andra<br> studenter på Din skola!</p>
+             <p>Korridorsnack<br></p> <h4>- Kom i kontakt med andra<br> studenter på Din skola!</h4>
 
           <!-- text boxarna-->
-
-        <form method="POST" action="../auth/login">
+          <form method="POST" action="../auth/login">
+            
             {!! csrf_field() !!}
 
             <div class="input-group input-group-lg">
@@ -56,10 +56,6 @@
                 <button type="submit" class="btn btn-default">Logga in</button>
             </div>
 
-
-             <div id="check" >
-                <input type="checkbox" name="remember"> Kom ihåg mig
-              </div>  
         </form>  
       
             <a href="{{url('auth/register')}}">Registrera?</a>

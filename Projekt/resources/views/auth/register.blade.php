@@ -32,7 +32,8 @@
           <div class="col-sm-12"><!-- ligger i rowen. detta är är den lila rutan-->
             <img class="logotype" alt="logotype" src="../img/Logotype1.png">
 
-            <p>Kom i kontakt med andra<br> studenter på Din skola!</p>
+
+            <p>KorridorSnack<br></p> <h4>- Kom i kontakt med andra<br> studenter på Din skola!</h4>
           <!-- text boxarna-->
 
         <form method="POST" action="../auth/register">
@@ -70,7 +71,8 @@
             <div class="btn-group" role="group" aria-label="...">
                 <button type="submit" class="btn btn-default">Registrera</button>
             </div>
-        </form>  
+        </form> 
+
          
              <a href="{{url('auth/login')}}">Logga in?</a>
           </div>

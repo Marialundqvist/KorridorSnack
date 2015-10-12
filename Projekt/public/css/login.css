@@ -81,14 +81,10 @@ a:hover{
 
 .logotype{
 	width: 150px;
-    margin-left: 30%;
+   margin-right: 57%;
+   margin-top: 2%;
 }
 
-#check {
-    float: right;
-    color: white;
-  
-    }
 .btn-default{
     font-family: arial;
     color: #663399;
@@ -105,6 +101,16 @@ a:hover{
     font-size: 24px;
 
 
+
+}
+
+h4 {
+    margin-top: -9%;
+    margin-left: 2%;
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
 
 }
 
@@ -176,14 +182,10 @@ a:hover{
 
 .logotype{
     width: 150px;
-    margin-left: 30%;
-
+    margin-right: 57%;
+   margin-top: 2%;
 }
-#check {
-    float: right;
-    color: white;
-  
-    }
+
 .btn-default{
     font-family: arial;
     color: #663399;
@@ -199,6 +201,18 @@ a:hover{
     font-size: 24px;
 
 
+
+}
+
+h4 {
+
+    margin-top: -9%;
+    margin-left: 2%;
+
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
 
 }
 
@@ -271,14 +285,10 @@ a:hover{
 
 .logotype{
     width: 150px;
-    margin-left: 30%;
+ margin-right: 57%;
+    margin-top: 2%;
 }
-/* --- styr komihåg mif boxen --- */ 
-#check {
-    float: right;
-    color: white;
-    
-    }
+
     /* --- logga in knappen är lila --- */ 
 .btn-default{
     font-family: arial;
@@ -295,6 +305,16 @@ a:hover{
     font-size: 24px;
 
 
+
+}
+
+h4 {
+        margin-top: -9%;
+    margin-left: 2%;
+    float: right;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
 
 }
 
