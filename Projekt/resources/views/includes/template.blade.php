@@ -16,13 +16,13 @@
       <div class="content">
       <div class="innehall">
          <div class="row">
-            <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+            <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png"> 
 
-           @if(Auth::check()) <!--- om användaren är inloggad visas logout knappen -->
+          @if(Auth::check()) <!--- om användaren är inloggad visas logout knappen -->
             <div class="loggaut">
             <a href="{{URL::route('login')}}" class="btn btn-default">Logga ut</a>
             </div>
-          @endif   
+        @endif
 
             <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
             <div class="col-sm-12">
@@ -31,7 +31,13 @@
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
-                     <h3></h3>
+
+                  <!--- Gör så att det syns vem som är inloggad -->
+                  @if(Auth::check())
+                  {{ Auth::User()->fname }}
+                  @endif
+
+
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>

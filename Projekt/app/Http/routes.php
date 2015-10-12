@@ -20,8 +20,7 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
-
-
+/* vilken som är förstasidan */
 Route::get('/', function () {
     return view('../auth/register');
 });
@@ -32,7 +31,7 @@ Route::get('../auth/register', function () {
 });
 
 
-/*Logga in, hamna på förstasidan*/
+/*registrera, hamna på förstasidan*/
 Route::get('../auth/register', function () {
     return view('forstasida');
 });
@@ -44,7 +43,7 @@ Route::get('forstasida', function () {
 
 
 
-/*från registrera sidan till logga in sidan.*/
+/*från login sidan till registrera sidan.*/
 Route::get('../auth/login', function () {
     return view('../auth/register');
 });
@@ -56,11 +55,6 @@ Route::get('../auth/login', function () {
 Route::get('welcome', function () {
     return view('login');
 });
-
-Route::get('loggaut', function () {
-    return view('loggaut');
-});
-
 
 
 /* Forumsvalmöjligheterna nedan */
@@ -92,7 +86,3 @@ Route::get('ovrigt', function () {
 Route::get('minainlagg', function () {
     return view('minainlagg');
 });
-
-
-
-

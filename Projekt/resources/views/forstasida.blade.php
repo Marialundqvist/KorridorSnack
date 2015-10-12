@@ -22,7 +22,7 @@
             <div class="loggaut">
             <a href="{{URL::route('login')}}" class="btn btn-default">Logga ut</a>
             </div>
-        @endif    
+        @endif
 
             <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
 
@@ -43,7 +43,9 @@
                   {{ Auth::User()->program }}
                   @endif
 
-                     <p>Webbdesign</p>
+
+
+                     
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>
