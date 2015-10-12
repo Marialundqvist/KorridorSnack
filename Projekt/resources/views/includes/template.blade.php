@@ -26,12 +26,24 @@
 
             <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
             <div class="col-sm-12">
-                <div class="profil">
+                <div class="profil">  
                <div class="col-sm-3">
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
-                     <h3></h3>
+<h4>
+                        <!--- Gör så att det syns vem som är inloggad -->
+                  @if(Auth::check())
+                  {{ Auth::User()->fname }}
+                  @endif
+
+
+                      <!--- Gör så att det syns vilket program den inloggade läser -->
+                   @if(Auth::check())
+                  {{ Auth::User()->program }}
+                  @endif
+                  </h4>
+                    
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>
