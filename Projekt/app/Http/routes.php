@@ -20,7 +20,7 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
-
+Route::resource('Post', 'PostController');
 
 Route::get('/', function () {
     return view('../auth/register');
@@ -32,7 +32,7 @@ Route::get('../auth/register', function () {
 });
 
 
-/*Logga in, hamna på förstasidan*/
+/*registrera, hamna på förstasidan*/
 Route::get('../auth/register', function () {
     return view('forstasida');
 });
@@ -44,22 +44,17 @@ Route::get('forstasida', function () {
 
 
 
-/*från registrera sidan till logga in sidan.*/
+/*från login sidan till registrera sidan.*/
 Route::get('../auth/login', function () {
     return view('../auth/register');
 });
 
-
-
-
-/*Logga in, logga ut*/
-Route::get('welcome', function () {
-    return view('login');
+/*från login sidan till forstda sidan.*/
+Route::get('../auth/login', function () {
+    return view('forstasida');
 });
 
-Route::get('loggaut', function () {
-    return view('loggaut');
-});
+
 
 
 
@@ -80,12 +75,12 @@ Route::get('hittaratt', function () {
     return view('hittaratt');
 });
 
-Route::get('event', function () {
-    return view('event');
+Route::get('evenemang', function () {
+    return view('evenemang');
 });
 
-Route::get('ovrigt', function () {
-    return view('ovrigt');
+Route::get('snack', function () {
+    return view('snack');
 });
 
 /* Länk under profilen, mina inlägg! */

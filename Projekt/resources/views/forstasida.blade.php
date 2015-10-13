@@ -32,18 +32,20 @@
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
-<h4>
+          <h4>
                   <!--- Gör så att det syns vem som är inloggad -->
                   @if(Auth::check())
                   {{ Auth::User()->fname }}
                   @endif
+                  </h4>
 
+                  <h5>
                   <!--- Gör så att det syns vilket program den inloggade läser -->
                    @if(Auth::check())
                   {{ Auth::User()->program }}
                   @endif
+                  </h5>
 
-             </h4>      
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>
@@ -62,30 +64,51 @@
                     </li>
                   </ul>
 
-
+ <form method="POST" action="/forstasida">
+            {!! csrf_field() !!}
     
       <div class="dropdown">
 
       <label for="sel1">Forum</label>
-      <select class="form-control" id="sel1">
+      <select class="form-control" name="category_id" type="text" id="sel1">
         <option>Senaste</option>
         <option>Läxhjälp</option>
         <option>Hitta rätt</option>
-        <option>Event</option>
-        <option>Övrigt</option>
+        <option>Evenemang</option>
+        <option>Snack</option>
       </select>
 </div>
         <div id="inlaggsruta">
-        <textarea class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
+        <textarea type="text" name="id" class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
         </div>
 
         <div id="forstaknapp">
         <button type="submit" class="btn btn-default">Skicka</button>
-        </div>        
+        </div>     
+
+        </form>   
 
     
 <div class="container-fluid" id="morklilaruta">
-  <p>här ska inlägg kallas in</p>
+
+  @if($Post->count())
+  <table class="table">
+  <tr>
+  <th>Namn</th>
+  <th>Message</th>
+  </tr>
+  @foreach($Post as $Post)
+  <tr>
+  <td>{{ $Post -> user_id = Auth::user()->fname }}</td>
+  <td>{{ $Post -> message }}</td>
+  
+  </tr>
+  @endforeach
+  </table>
+  @endif
+
+
+
    
 </div><!-- mörklila ruta stängs -->
 
@@ -109,10 +132,10 @@
                     <a href="{{url('hittaratt')}}">Hitta rätt<a/>
                     </div>
                     <div class="andra"> 
-                    <a href="{{url('event')}}">Event<a/><br>
+                    <a href="{{url('evenemang')}}">Evenemang<a/><br>
                     </div>
                     <div class="forsta"> 
-                    <a href="{{url('ovrigt')}}">Övrigt<a/>
+                    <a href="{{url('snack')}}">Snack<a/>
                     </div>
                     </a>
                     
