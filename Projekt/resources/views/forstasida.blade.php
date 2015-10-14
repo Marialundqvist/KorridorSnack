@@ -32,7 +32,7 @@
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
-
+<h4>
                   <!--- Gör så att det syns vem som är inloggad -->
                   @if(Auth::check())
                   {{ Auth::User()->fname }}
@@ -43,9 +43,13 @@
                   {{ Auth::User()->program }}
                   @endif
 
+<<<<<<< HEAD
 
 
                      
+=======
+             </h4>      
+>>>>>>> origin/master
                    </div>
                      <a href="{{url('minainlagg')}}">Mina inlägg<a/>
                      </a>
