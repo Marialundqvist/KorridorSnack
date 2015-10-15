@@ -1,17 +1,21 @@
-<!DOCTYPE html>
+@extends('layouts.master')
+
+
+
+@section('inlaggen')
+
+
+@stop
+
 <html>
+
 <head>
 
-@include('includes.template')
-
-</head>
+</head>	
 
 <body>
-	<div class="container">
-		@yield('innehall')
-<p>Läxhjälp</p>
-
-</body>
+	
+</body>	
 
 </html>
 
