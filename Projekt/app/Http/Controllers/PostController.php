@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use \App\Post;
+use DB;
 
 class PostController extends Controller
 {
@@ -16,8 +17,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $Post = Post::all();
-        return view('forstasida', compact('Post'));
+        $posts = DB::table('Post')
+        ->join('User', 'Post.user_id', '=', 'User.id')->get();
+        //dd($posts);
+        return view('forstasida', compact('posts'));
     }
 
     /**

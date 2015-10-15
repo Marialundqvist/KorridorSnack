@@ -22,7 +22,7 @@
             <div class="loggaut">
             <a href="{{URL::route('login')}}" class="btn btn-default">Logga ut</a>
             </div>
-        @endif
+        @endif    
 
             <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
 
@@ -32,66 +32,81 @@
                   <div class="sidebar">
                     <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
                      <div class="profiltext">
-<h4>
+          <h4>
                   <!--- Gör så att det syns vem som är inloggad -->
                   @if(Auth::check())
                   {{ Auth::User()->fname }}
                   @endif
+                  </h4>
 
+                  <h5>
                   <!--- Gör så att det syns vilket program den inloggade läser -->
                    @if(Auth::check())
                   {{ Auth::User()->program }}
                   @endif
+                  </h5>
 
-<<<<<<< HEAD
-
-
-                     
-=======
-             </h4>      
->>>>>>> origin/master
                    </div>
-                     <a href="{{url('minainlagg')}}">Mina inlägg<a/>
-                     </a>
+                   
                  </div>
                   </div>
                </div>
                <div class="col-sm-9">
                   <h3>Senaste</h3>
-                  <ul class="nav navbar-nav">
-                    <li>
-                      <a href="{{url('senaste')}}">Senaste</a>
-                    </li>
+                
 
-                    <li>
-                       <a href="{{url('popularaste')}}">Populärast</a>
-                    </li>
-                  </ul>
+             
 
 
-    
+
+
       <div class="dropdown">
 
       <label for="sel1">Forum</label>
-      <select class="form-control" id="sel1">
+      <select class="form-control" name="category_id" type="text" id="sel1">
         <option>Senaste</option>
         <option>Läxhjälp</option>
         <option>Hitta rätt</option>
-        <option>Event</option>
-        <option>Övrigt</option>
+        <option>Evenemang</option>
+        <option>Snack</option>
       </select>
 </div>
         <div id="inlaggsruta">
-        <textarea class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
+        <textarea type="text" name="id" class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
         </div>
 
         <div id="forstaknapp">
         <button type="submit" class="btn btn-default">Skicka</button>
-        </div>        
+        </div>     
+
+        </form>   
 
     
 <div class="container-fluid" id="morklilaruta">
-  <p>här ska inlägg kallas in</p>
+
+  
+  <table class="table">
+  <tr>
+  <th>Namn</th>
+  <th>Inlägg</th>
+  <th>Tid</th>
+  </tr>
+  @foreach($posts as $post)
+  <?php
+  //namespace App\Http\Controllers; 
+  //use \App\User;
+  //$user = User::find($post->user_id);
+    ?>
+
+  <tr>
+  <td>{{ $post->fname }}</td>  
+  <td>{{ $post->message }}</td>
+  <td>{{ $post->created_at }}</td>
+  
+  </tr>
+  @endforeach
+  </table>
+
    
 </div><!-- mörklila ruta stängs -->
 
@@ -115,10 +130,10 @@
                     <a href="{{url('hittaratt')}}">Hitta rätt<a/>
                     </div>
                     <div class="andra"> 
-                    <a href="{{url('event')}}">Event<a/><br>
+                    <a href="{{url('evenemang')}}">Evenemang<a/><br>
                     </div>
                     <div class="forsta"> 
-                    <a href="{{url('ovrigt')}}">Övrigt<a/>
+                    <a href="{{url('snack')}}">Snack<a/>
                     </div>
                     </a>
                     

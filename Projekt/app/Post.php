@@ -20,14 +20,14 @@ class Post extends Model
      *
      * @var string
      */
-    protected $table = 'Post';
+    protected $table = 'forstasida';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['message', 'category_id'];
+    protected $fillable = ['message', 'category_id', 'fname'];
 
  
 }

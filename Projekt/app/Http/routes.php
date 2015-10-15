@@ -20,10 +20,16 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
-/* vilken som är förstasidan */
+Route::resource('Post', 'PostController');
+
 Route::get('/', function () {
-    return view('../auth/register');
+    return view('../auth/login');
 });
+
+
+
+
+
 
 /*från registrera sidan till logga in sidan.*/
 Route::get('../auth/register', function () {
@@ -48,13 +54,13 @@ Route::get('../auth/login', function () {
     return view('../auth/register');
 });
 
-
-
-
-/*Logga in, logga ut*/
-Route::get('welcome', function () {
-    return view('login');
+/*från login sidan till forstda sidan.*/
+Route::get('../auth/login', function () {
+    return view('forstasida');
 });
+
+
+
 
 
 /* Forumsvalmöjligheterna nedan */
@@ -74,15 +80,19 @@ Route::get('hittaratt', function () {
     return view('hittaratt');
 });
 
-Route::get('event', function () {
-    return view('event');
+Route::get('evenemang', function () {
+    return view('evenemang');
 });
 
-Route::get('ovrigt', function () {
-    return view('ovrigt');
+Route::get('snack', function () {
+    return view('snack');
 });
 
 /* Länk under profilen, mina inlägg! */
 Route::get('minainlagg', function () {
     return view('minainlagg');
 });
+
+
+
+
