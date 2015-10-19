@@ -1,13 +1,19 @@
 html, body
 
             body {
-                font-family: 'Lato';
+                font-family: 'Arial';
             }
 
 /*Forumsmeny ovanför inlägg*/
 .dropdown {
     width: 150px;
     position: relative;
+}
+
+.table {
+    color: #bea1db;
+    font-size: 14px;
+    
 }
 
 /*Styr det vita inlägget*/
@@ -50,14 +56,17 @@ html, body
     background-color: #663399;
     position: absolute;
     margin-top: 2%;
-    height: 25%;
+    height: relative;
     width: 95%;
+
 }
 /* Gör att textarean inte kan göras större/mindre */
 textarea {
     resize: none;
 }
-/*Här i ska inlägg komma, den lilla ljuslila rutan*/
+
+
+/*Här i ska inlägg komma, den lilla ljuslila rutan
 #ljuslilaruta{
     background-color: #bea1db;
     position: absolute;
@@ -65,7 +74,7 @@ textarea {
     height: 10%;
     width: 95%;
 
-}
+}*/
 
 .bakgrundsbild {
     width: 100%;
@@ -95,7 +104,7 @@ textarea {
     margin-top: 2%;
     margin-left: 1%;
     width: 30%;
-    height: 40%;
+    height: relative;
     float: left;
     border-radius: 4px;
 
@@ -188,6 +197,7 @@ h3 {
     border-bottom: 5px solid grey;
     width: 200px;
 }
+
 /*Inställning för de gråa fälten i forum, de  ljusgråa (varannan)*/
 .andra {
     text-decoration: none;
@@ -210,6 +220,9 @@ a:hover {
     color: black;
     text-decoration: none;
 }
+a:active{
+    color: white;
+}
 
 /*Inställningar för profilbilden som ligger i den gråa rutan till vänter*/
 .profilbild {
@@ -226,10 +239,16 @@ a:hover {
 
 }
 
+
+
+
 /* --- media queries för skärm som är max 768--- */ 
 
 /* Extra Small */
 @media screen and (max-width:768px){
+
+
+
 
 /*Forumsmeny ovanför inlägg*/
 .dropdown {
@@ -255,6 +274,10 @@ a:hover {
     color: #663399;
     display: block;
 }
+.table {
+    color: #bea1db;
+}
+
 /*Här i ska inlägg komma, den mörklila rutan*/
 #morklilaruta{
     background-color: #663399;
@@ -264,13 +287,14 @@ a:hover {
     min-width: 100%;
     z-index: 2;
 }
-/*Här i ska inlägg komma, den lilla ljuslila rutan*/
+
+/*Här i ska inlägg komma, den lilla ljuslila rutan
 #ljuslilaruta{
     background-color: #bea1db;
     height: relative;
     position: relative;
     min-width: 100%;
-}
+}*/
 /* Gör att textarean inte kan göras större/mindre */
 textarea {
     resize: none;
@@ -317,7 +341,7 @@ textarea {
     margin-top: 2%;
     margin-left: 1%;
     min-width: 99%;
-    height: 92%;
+    height: relative;
     float: right;
     border-radius: 4px;
     margin-left: -5;
@@ -437,6 +461,9 @@ a:hover {
 }
 }
 
+
+
+
 /* Media Quiery för skärmar med en höjd som är mindre än 444px*/
 @media screen and (max-height: 444px){
     /*Forumsmeny ovanför inlägg*/
@@ -463,12 +490,16 @@ a:hover {
     color: #663399;
     display: block;
 }
+.table {
+    color: #bea1db;
+}
+
 /*Här i ska inlägg komma, den mörklila rutan*/
 #morklilaruta{
     background-color: #663399;
     position: relative;
     margin-top: 4%;
-    height: 25%;
+    height: relative;
     min-width: 95%;
     z-index: 2;
 }
@@ -489,7 +520,7 @@ textarea {
     position: relative;
 } 
 
-/*Här i ska inlägg komma, den lilla ljuslila rutan*/
+/*Här i ska inlägg komma, den lilla ljuslila rutan
 #ljuslilaruta{
     background-color: #bea1db;
     position: absolute;
@@ -497,7 +528,7 @@ textarea {
     height: 10%;
     position: relative;
     min-width: 95%;
-}
+}*/
 
 .bakgrundsbild {
     width: 100%;
@@ -527,7 +558,7 @@ textarea {
     margin-top: 2%;
     margin-left: 1%;
     width: 30%;
-    height: 40%;
+    height: relative;
     float: left;
     border-radius: 4px;
 
@@ -541,6 +572,7 @@ textarea {
     float: right;
     border-radius: 4px;
     margin-left: -5;
+    height: relative;
 }
 /*Logotypens position osv.*/
 .logotype {

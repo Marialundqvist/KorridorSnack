@@ -15,142 +15,104 @@
       @show
    </head>
    <body>
-    @section('top')
+      @section('top')
       <div class="content">
-      <div class="innehall">
-         <div class="row">
-            <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
-
-        @if(Auth::check()) <!--- om användaren är inloggad visas logout knappen -->
-            <div class="loggaut">
-            <a href="{{URL::route('login')}}" class="btn btn-default">Logga ut</a>
-            </div>
-        @endif    
-
-            <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
-
-            <div class="col-sm-12">
-                <div class="profil">
-               <div class="col-sm-3">
-                  <div class="sidebar">
-                    <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
-                     <div class="profiltext">
-          <h4>
-                  <!--- Gör så att det syns vem som är inloggad -->
-                  @if(Auth::check())
-                  {{ Auth::User()->fname }}
-                  @endif
-                  </h4>
-
-                  <h5>
-                  <!--- Gör så att det syns vilket program den inloggade läser -->
-                   @if(Auth::check())
-                  {{ Auth::User()->program }}
-                  @endif
-                  </h5>
-
-                   </div>
-                     <a href="{{url('minainlagg')}}">Mina inlägg<a/>
-                     </a>
-                 </div>
+         <div class="innehall">
+            <div class="row">
+               <img class="bakgrundsbild" alt="bakgrundsbild" src="img/login.png">
+               @if(Auth::check()) <!--- om användaren är inloggad visas logout knappen -->
+               <div class="loggaut">
+                  <a href="{{URL::route('login')}}" class="btn btn-default">Logga ut</a>
+               </div>
+               @endif    
+               <a href="{{url('forstasida')}}"><img class="logotype" alt="logotype" width="150" src="img/Logotype1.png"></a>
+               <div class="col-sm-12">
+                  <div class="profil">
+                     <div class="col-sm-3">
+                        <div class="sidebar">
+                           <img class="profilbild" alt="profilbild" width="150" src="img/profilbild.png">
+                           <div class="profiltext">
+                              <h4>
+                                 <!--- Gör så att det syns vem som är inloggad -->
+                                 @if(Auth::check())
+                                 {{ Auth::User()->fname }}
+                                 @endif
+                              </h4>
+                              <h5>
+                                 <!--- Gör så att det syns vilket program den inloggade läser -->
+                                 @if(Auth::check())
+                                 {{ Auth::User()->program }}
+                                 @endif
+                              </h5>
+                           </div>
+                        </div>
+                     </div>
+                     @show
                   </div>
-                  @show
-               </div>
-               
-               <div class="col-sm-9">
-                @section('inlaggen')
-                  <h3>Senaste</h3>
-                  <ul class="nav navbar-nav">
-                    <li>
-                      <a href="{{url('senaste')}}">Senaste</a>
-                    </li>
-
-                    <li>
-                       <a href="{{url('popularaste')}}">Populärast</a>
-                    </li>
-                  </ul>
-
- <form method="POST" action="/forstasida">
-            {!! csrf_field() !!}
-    
-      <div class="dropdown">
-
-      <label for="sel1">Forum</label>
-      <select class="form-control" name="category_id" type="text" id="sel1">
-        <option>Senaste</option>
-        <option>Läxhjälp</option>
-        <option>Hitta rätt</option>
-        <option>Evenemang</option>
-        <option>Snack</option>
-      </select>
-</div>
-        <div id="inlaggsruta">
-        <textarea type="text" name="id" class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
-        </div>
-
-        <div id="forstaknapp">
-        <button type="submit" class="btn btn-default">Skicka</button>
-        </div>     
-
-        </form>   
-
-    
-<div class="container-fluid" id="morklilaruta">
-
- 
-
-
-   
-</div><!-- mörklila ruta stängs -->
-
-<div class="container-fluid" id="ljuslilaruta">
-   <input type="text" class="form-control" placeholder="Svara">
-   <button type="submit" class="btn btn-default">Skicka</button> 
-   
-</div><!-- ljuslila ruta stängs -->
-
-             @show
-               </div>
-               
-               <div class="forum">
-                 @section('bottom')
-               <div class="col-sm-3">
-                <h3>Forum</h3>
-                    <div class="forsta"> 
-                    <a href="{{url('senaste')}}">Senaste<a/>
-                    </div>
-                    <div class="andra"> 
-                    <a href="{{url('laxhjalp')}}">Läxhjälp<a/>
-                    </div>
-                    <div class="forsta"> 
-                    <a href="{{url('hittaratt')}}">Hitta rätt<a/>
-                    </div>
-                    <div class="andra"> 
-                    <a href="{{url('evenemang')}}">Evenemang<a/><br>
-                    </div>
-                    <div class="forsta"> 
-                    <a href="{{url('snack')}}">Snack<a/>
-                    </div>
-                    </a>
-                    
-              </div>
-               </div>
-               
-               <div class="omoss">
-               <div class="col-sm-3">
-                  <h3>Om oss</h3>
-                  <p>@Korridorsnack</p>
-              </div>
-               </div>
-               <div class="kontakt">
-               <div class="col-sm-3">
-                  <h3>Kontakt</h3>
-                  <p>info@korridorsnack.se</p>
-              </div>
-                </div>
+                  <div class="col-sm-9">
+                     @section('inlaggen')
+                     <h3>Senaste</h3>
+                     <form method="POST" action="{{URL::route('Post.store')}}">
+                        {!! csrf_field() !!}
+                        <div class="dropdown">
+                           <label for="sel1">Forum</label>
+                           <select class="form-control" name="category_id" type="text" id="sel1">
+                              <option>Läxhjälp</option>
+                              <option>Hitta rätt</option>
+                              <option>Evenemang</option>
+                              <option>Snack</option>
+                           </select>
+                        </div>
+                        <div id="inlaggsruta">
+                           <textarea type="text" name="message" class="form-control" rows="5" id="comment" placeholder="Inlägg"></textarea>
+                        </div>
+                        <div id="forstaknapp">
+                           <button type="submit" class="btn btn-default">Skicka</button>
+                        </div>
+                     </form>
+                     <div class="container-fluid" id="morklilaruta">
+                     </div>
+                     <!-- mörklila ruta stängs -->
+                     @show
+                  </div>
+                  <div class="forum">
+                     @section('bottom')
+                     <div class="col-sm-3">
+                        <h3>Forum</h3>
+                        <div class="forsta">
+                           <a href="{{url('senaste')}}">Senaste
+                           <a/>
+                        </div>
+                        <div class="andra"> 
+                        <a href="{{url('laxhjalp')}}">Läxhjälp<a/>
+                        </div>
+                        <div class="forsta"> 
+                        <a href="{{url('hittaratt')}}">Hitta rätt<a/>
+                        </div>
+                        <div class="andra"> 
+                        <a href="{{url('evenemang')}}">Evenemang<a/><br>
+                        </div>
+                        <div class="forsta"> 
+                        <a href="{{url('snack')}}">Snack<a/>
+                        </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="omoss">
+                     <div class="col-sm-3">
+                        <h3>Om oss</h3>
+                        <p>@Korridorsnack</p>
+                     </div>
+                  </div>
+                  <div class="kontakt">
+                     <div class="col-sm-3">
+                        <h3>Kontakt</h3>
+                        <p>info@korridorsnack.se</p>
+                     </div>
+                  </div>
                </div>
                @show
-             </div>
+            </div>
          </div>
       </div>
    </body>

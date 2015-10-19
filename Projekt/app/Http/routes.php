@@ -22,10 +22,14 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::resource('Post', 'PostController');
 
-Route::get('/', function () {
-    return view('../auth/login');
-});
 
+
+
+
+/*Funkar inte för tillfället*/
+Route::get('/', function () {
+    return view('../auth/register');
+});
 
 
 
@@ -44,8 +48,11 @@ Route::get('../auth/register', function () {
 
 /*vara på förstasida*/
 Route::get('forstasida', function () {
-    return view('forstasida');
+    return Redirect::route('Post.index');
 });
+
+
+
 
 
 
@@ -54,45 +61,32 @@ Route::get('../auth/login', function () {
     return view('../auth/register');
 });
 
-/*från login sidan till forstda sidan.*/
-Route::get('../auth/login', function () {
-    return view('forstasida');
-});
-
-
-
 
 
 /* Forumsvalmöjligheterna nedan */
 Route::get('senaste', function () {
-    return view('senaste');
+       $posts = DB::table('Post')->join('User','Post.user_id', '=', 'User.id')->get();
+        return view('senaste', compact('posts'));
 });
 
-Route::get('popularaste', function () {
-    return view('popularaste');
-});
+
 
 Route::get('laxhjalp', function () {
-    return view('laxhjalp');
+    $posts = DB::table('Post')->join('User','Post.user_id', '=', 'User.id')->where('category_id','Läxhjälp')->get();
+    return view('laxhjalp', compact('posts'));
 });
 
 Route::get('hittaratt', function () {
-    return view('hittaratt');
+      $posts = DB::table('Post')->join('User','Post.user_id', '=', 'User.id')->where('category_id','Hitta rätt')->get();
+    return view('hittaratt', compact('posts'));
 });
 
 Route::get('evenemang', function () {
-    return view('evenemang');
+    $posts = DB::table('Post')->join('User','Post.user_id', '=', 'User.id')->where('category_id','Evenemang')->get();
+    return view('evenemang', compact('posts'));
 });
 
 Route::get('snack', function () {
-    return view('snack');
+       $posts = DB::table('Post')->join('User','Post.user_id', '=', 'User.id')->where('category_id','Snack')->get();
+    return view('snack', compact('posts'));
 });
-
-/* Länk under profilen, mina inlägg! */
-Route::get('minainlagg', function () {
-    return view('minainlagg');
-});
-
-
-
-

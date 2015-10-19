@@ -1,13 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use \App\Post;
 use DB;
-
+use Auth;
 class PostController extends Controller
 {
     /**
@@ -17,11 +15,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = DB::table('Post')
-        ->join('User', 'Post.user_id', '=', 'User.id')->get();
-        //dd($posts);
+        //$posts = Post::all();
+        $posts = DB::table('Post')->join('User','Post.user_id', '=', 'User.id')->get();
         return view('forstasida', compact('posts'));
+      
+      
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -32,7 +32,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -41,9 +40,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        
+        $post = new Post();
+        $post->message = $request->message;
+        $post->category_id = $request->category_id;
+        $post->user_id = Auth::user()->id;
+        $post->save();
+        return redirect()->back()->with('data');
     }
-
     /**
      * Display the specified resource.
      *
@@ -54,7 +59,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -65,7 +69,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -77,7 +80,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
